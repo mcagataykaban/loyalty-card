@@ -1,9 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
+import StoreCard from '../components/StoreCard'
 
 const StoresScreen = (props) => {
   return (
     <View navigation={props.navigation} style={styles.container}>
+      <StoreCard/>
       <Text>StoresScreen!</Text>
       <Button
         title="Go"

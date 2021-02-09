@@ -1,13 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
+import AppLoading from 'expo-app-loading';
 import LoyaltyNavigator from './navigation/LoyaltyNavigator'
 import HomePageScreen from "./screens/HomePageScreen";
+import { enableScreens } from "react-native-screens";
 
+enableScreens();
 const fetchFonts = () => {
-  Font.loadAsync({
+  return Font.loadAsync({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
     "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
   });

@@ -12,13 +12,22 @@ import HomePageScreen from "../screens/HomePageScreen";
 //navigator
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import Colors from "../constants/Colors";
 
 const Stack = createStackNavigator();
 
 const LoyaltyNavigator = () => {
+  const defaultOptions = {
+    headerTitleAlign: "center",
+    headerStyle: {
+      backgroundColor: '#cfcfcf',
+    },
+    headerBackTitle: "",
+  };
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomePage">
+        <StatusBar/>
+      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="HomePage">
         <Stack.Screen name="HomePage" component={HomePageScreen} />
         <Stack.Screen name="Stores" component={StoresScreen} />
         <Stack.Screen name="StoreProfile" component={StoreProfileScreen} />
