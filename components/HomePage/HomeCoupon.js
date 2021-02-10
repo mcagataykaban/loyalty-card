@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 const HomeCoupon = (props) => {
   return (
-    <TouchableOpacity onPress={props.onSelectC}>
+    <TouchableOpacity onPress={props.onSelectC} style={styles.shadow3}>
       <View style={{ ...props.style, ...styles.imageContainer }}>
         {props.children ? (
           props.children
@@ -20,7 +20,17 @@ const HomeCoupon = (props) => {
     </TouchableOpacity>
   );
 };
+function elevationShadowStyle(elevation) {
+  return {
+    elevation,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 0.5 * elevation },
+    shadowOpacity: 0.3,
+    shadowRadius: 0.8 * elevation
+  };
+}
 const styles = StyleSheet.create({
+  shadow3: elevationShadowStyle(20),
   imageContainer: {
     width: 110,
     marginHorizontal: 5,

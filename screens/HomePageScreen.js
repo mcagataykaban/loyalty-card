@@ -89,6 +89,8 @@ const styles = StyleSheet.create({
   },
   bottomGroup: {
     flex: 1,
+    marginBottom:80
+   
     // flexDirection : 'row',
     // backgroundColor: "#404040",
     // justifyContent: 'space-around'

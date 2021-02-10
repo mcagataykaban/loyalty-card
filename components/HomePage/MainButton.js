@@ -17,19 +17,12 @@ const styles = StyleSheet.create({
         height:'auto',
         justifyContent: 'center',
         textAlign: 'center',
-        // backgroundColor: Colors.primaryColor,
         paddingVertical: 8,
         paddingHorizontal: 12,
         marginHorizontal:12,
         marginVertical:5,
         flexDirection: 'row',
         alignItems: 'center'
-        // shadowColor: "black",
-        // shadowOpacity: 0.26,
-        // shadowOffset: { width: 0, height: 2 },
-        // shadowRadius: 10,
-        // elevation: 3,
-        // borderRadius: 8,
     },
 });
 
